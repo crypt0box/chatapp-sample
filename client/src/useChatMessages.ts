@@ -11,7 +11,8 @@ export const useChatMessages = (userId: string): UseChatMessagesReturn => {
   const webSocketRef = useRef<WebSocket>();
 
   useEffect(() => {
-    const socket = new WebSocket(`ws://${window.location.host}/chat`);
+    const protocol = window.location.protocol === "http:" ? "ws" : "wss";
+    const socket = new WebSocket(`${protocol}://${window.location.host}/chat`);
     webSocketRef.current = socket;
 
     socket.addEventListener("message", (event) => {
