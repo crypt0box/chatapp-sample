@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { Container } from "./components/Container";
 import { Layout, LayoutBottom, LayoutMain } from "./components/Layout";
-import { MeesageInputForm } from "./components/MeesageInputForm";
+import { MessageInputForm } from "./components/MeesageInputForm";
 import { Messages } from "./components/Messages";
 import { globalCss } from "./stitches-config";
 import { useChatMessages } from "./useChatMessages";
@@ -31,7 +31,7 @@ function App() {
       </LayoutMain>
       <LayoutBottom>
         <Container>
-          <MeesageInputForm onSubmit={addMessage} />
+          <MessageInputForm onSubmit={addMessage} />
         </Container>
       </LayoutBottom>
     </Layout>

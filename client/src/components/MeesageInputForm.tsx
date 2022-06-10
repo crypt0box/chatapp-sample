@@ -41,7 +41,7 @@ const submitButton = css({
   },
 });
 
-export const MeesageInputForm: React.FC<{
+export const MessageInputForm: React.FC<{
   onSubmit: (message: string) => void;
 }> = ({ onSubmit }) => {
   const formRef = useRef<HTMLFormElement>(null);
